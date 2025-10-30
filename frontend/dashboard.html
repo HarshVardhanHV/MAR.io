@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>MAR.io</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+    <div class="gamecontent">
+        <div class="cloud cloudani"></div>
+        <div class="mountain"></div>
+        <div class="mario"></div>
+        <div class="obstacle"></div>
+        <div id="dashB">
+            <div class="dashin">
+                <h2>MAR.io</h2>
+                <div class="profile-info">
+                    <p><strong>Username: </strong> <span id="username">Loading...</span></p>
+                    <p><strong>High Score: </strong> <span id="highScore">0</span></p>
+                </div>
+                <div class="formAction">
+                    <button id="playBtn" onclick="window.location.href='controls.html'">PLAY</button>
+                    <div class="leadout">
+                        <button id="leadBtn" onclick="window.location.href='leaderboard.html'">Leaderboard</button>
+                        <button id="logoutBtn" onclick="window.location.href='login.html'">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ground"></div>
+    </div>
+</body>
+</html>

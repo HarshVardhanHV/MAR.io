@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(106, 191, 228);
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+.gamecontent{
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.ground{
+    z-index: 1;
+    background-image: url(Images/ground.png);
+    width: 10000000000vw;
+    height: 22.1vh;
+    position: absolute;
+    bottom: 0vh;
+}
+.cloud{
+    background-image: url(Images/clouds.png);
+    width: 10000000000vw;
+    height: 27vh;
+    position: absolute;
+    bottom: 60vh;
+}
+.mountain{
+    background-image: url(Images/mountains.png);
+    width: 10000000000vw;
+    height: 22.1vh;
+    position: absolute;
+    bottom: 20.4vh;
+}
+
+.mario{
+    background-image: url(Images/mario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5.6vw;
+    height: 6.6vw;
+    position: absolute;
+    bottom: 22vh;
+    left: 15vh;
+}
+
+.obstacle{
+    background-image: url(Images/enemy1.png);
+    width: 5.6vw;
+    height: 5.1vw;
+    background-size: cover;
+    position: absolute;
+    bottom: 21.2vh;
+    right: 15vh;
+}
+
+.cloudani{
+    animation: cloudani 15s linear infinite;
+}
+
+#dashB{
+    z-index: 1;
+    background-image: url(Images/ground.png);
+    width: 49vw;
+    height: 65vh;
+    position: absolute;
+    bottom: 22.2vh;
+    left: 25.15%;
+    border-radius: 5% 5% 0 0;
+}
+
+.dashin{
+    background-color: #726868;
+    position: absolute;
+    width: 92%;
+    height: 92%;
+    left: 4%;
+    top: 4%;
+    box-shadow: inset 0 0 25px rgb(0, 0, 0);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    /* padding: 0.2vw; */
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7vh;
+    color: #332121;
+    text-shadow: 3px 3px 0 #000000;
+}
+
+.awd, .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.awd div, .arrow div, .space {
+    width: 6vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #332121;
+    border-radius: 15%;
+    background-color: #c7bebe;
+    box-shadow: 0 4px 0 #332121;
+    font-size: 2.5vh;
+    color: #332121;
+    text-shadow: 1px 1px 0 #000;
+    transition: all 0.2s ease;
+}
+
+.mean{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.3vw;
+    text-transform: uppercase;
+}
+
+.mean div{
+    width: 6vh;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+    color: #332121;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* .space {
+    width: 25vh;
+    height: 4vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+} */
+
+/* Press-down hover effect */
+.awd div:hover, .arrow div:hover, .space:hover {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #332121;
+    background-color: #a19b9b;
+}
+
+/* Labels under keys */
+.key-labels {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-top: 1vh;
+}
+
+.key-labels p {
+    font-size: 1.6vh;
+    color: #f5f5f5;
+}
+
+/* Optional subtle animation for life */
+@keyframes bounceKey {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Example animation for Jump key */
+.space.animate {
+    animation: bounceKey 0.6s ease-in-out infinite;
+}
+
+
+#playBtn{
+    height: 7vh;
+    font-size: 100%;
+    width: 8vw;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #332121;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15%;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+a:hover, button:hover {
+  transform: scale(1.02);
+}
+
+@keyframes cloudani{
+    0%{
+        left: 0vw;
+    }
+    100%{
+        left: -100vw;
+    }
+}
+
+@media screen and (max-width: 480px)  {
+    
+}

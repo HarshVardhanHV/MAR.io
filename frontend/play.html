@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>MAR.io</title>
+    <link rel="stylesheet" href="play.css">
+    <script src="play.js"></script>
+</head>
+<body>
+    <div class="gamecontent">
+        <div class="ground groundani"></div>
+        <div class="cloud cloudani"></div>
+        <div class="mountain mountainani"></div>
+        <div class="gameover">
+            <div id="dashB">
+            <div class="dashin">
+                <h2>Game Over</h2>
+                <div class="profile-info">
+                    <p><strong>Score:</strong> <span id="presscore"></span></p>
+                    <p><strong>Your High Score: </strong> <span id="highScore">0</span></p>
+                </div>
+                <div class="formAction">
+                    <button id="playBtn" onclick="window.location.reload()">RUN AGAIN</button>
+                    <div class="leadout">
+                        <button id="leadBtn" onclick="window.location.href='dashboard.html'">HOME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="scoreC">Score : 0</div>
+        <div class="mario"></div>
+        <div class="obstacle obstacleani">
+
+        </div>
+    </div>
+</body>
+</html>
