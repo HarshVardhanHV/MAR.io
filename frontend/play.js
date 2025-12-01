@@ -18,7 +18,7 @@ setTimeout(() => {
 
 document.onkeydown = function (e) {
     console.log("key pressed :", e.key)
-    if (key == 38 || key == 32 || key == 87 || key == 104) {
+    if (e.keyCode == 38 || e.keyCode == 32 || e.keyCode == 87 || e.keyCode == 104) {
         mario = document.querySelector('.mario');
         mario.classList.add('animatemario');
         audioJ.play();
@@ -34,12 +34,12 @@ document.onkeydown = function (e) {
             audioJ.pause();
         }, 1500);
     }
-    if (key == 39 || key == 68 || key == 102) {
+    if (e.keyCode == 39 || e.keyCode == 68 || e.keyCode == 102) {
         mario = document.querySelector('.mario');
         marioX = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
         mario.style.left = marioX + 30 + "px";
     }
-    if (key == 37 || key == 65 || key == 100) {
+    if (e.keyCode == 37 || e.keyCode == 65 || e.keyCode == 100) {
         mario = document.querySelector('.mario');
         marioX = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
         mario.style.left = (marioX - 30) + "px";
