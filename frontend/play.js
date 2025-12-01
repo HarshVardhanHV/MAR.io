@@ -1,5 +1,5 @@
 const token = localStorage.getItem("token");
-if (!token) window.location.href = "login.html";
+if (!token) window.location.href = "index.html";
 
 
 
@@ -109,7 +109,7 @@ async function saveHighScore(score) {
 
   if (!token) {
     console.log("⚠️ No token found, user not logged in.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -120,7 +120,7 @@ async function saveHighScore(score) {
 
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch("http://localhost:5000/api/scores", {
+    const response = await fetch("https://mario-4c9y.onrender.com/api/scores", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -144,7 +144,7 @@ async function saveHighScore(score) {
 
   const highScoreEl = document.getElementById("highScore");
 
-    fetch("http://localhost:5000/api/auth/me", {
+    fetch("https://mario-4c9y.onrender.com/api/auth/me", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`
@@ -163,7 +163,7 @@ async function saveHighScore(score) {
         console.error(err);
         alert("Session expired, please login again.");
         localStorage.removeItem("token");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 
 }

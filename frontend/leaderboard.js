@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tableBody = document.querySelector("#leaderTable tbody");
 
     const token = localStorage.getItem("token");
-    fetch("http://localhost:5000/api/scores/leaderboard", {
+    fetch("https://mario-4c9y.onrender.com/api/scores/leaderboard", {
         headers: {
             "Authorization": `Bearer ${token}`
         }

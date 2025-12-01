@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/auth/register", {
+            const response = await fetch("https://mario-4c9y.onrender.com/api/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 alert("Profile created successfully! Please login now.");
-                window.location.href = "login.html";
+                window.location.href = "index.html";
             } else {
                 alert(data.message || "Error creating profile!");
             }

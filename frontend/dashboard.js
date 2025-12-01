@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-        window.location.href = "login.html";
+        window.location.href = "index.html";
         return;
     }
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const highScoreEl = document.getElementById("highScore");
     const logoutBtn = document.getElementById("logoutBtn");
 
-    fetch("http://localhost:5000/api/auth/me", {
+    fetch("https://mario-4c9y.onrender.com/api/auth/me", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error(err);
         alert("Session expired, please login again.");
         localStorage.removeItem("token");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 
     logoutBtn.addEventListener("click", () => {
@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("userId");
         localStorage.removeItem("username");
 
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 });
